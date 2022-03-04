@@ -60,10 +60,12 @@ table {
 
 th {
   border: 1px solid grey;
+  padding: 10px 20px;
 }
 
 td {
   border: 1px solid grey;
+  padding: 10px 20px;
 }
 
 .container {
@@ -73,4 +75,8 @@ td {
 
 .link {
   text-decoration: underline;
+}
+
+.button__del {
+  display: none;
 }

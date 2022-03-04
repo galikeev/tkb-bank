@@ -90,12 +90,99 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_checkInputs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/checkInputs */ "./src/js/modules/checkInputs.js");
+/* harmony import */ var _modules_addDelRow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/addDelRow */ "./src/js/modules/addDelRow.js");
+
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
+
+  Object(_modules_checkInputs__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  Object(_modules_addDelRow__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/addDelRow.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/addDelRow.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const addDelRow = () => {
+  const addBtn = document.querySelector('.button__add');
+  const table = document.querySelector('.table');
+  const delBtn = document.querySelector('.button__del');
+  addBtn.addEventListener('click', () => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+        <td>
+            <input name="name" type="text" required>
+        </td>
+        <td>
+            <select name="#" id="#">
+                <option value="1">менеджер</option>
+                <option value="1">аналитик</option>
+                <option value="1">программист</option>
+                <option value="1">юрист</option>
+            </select>
+        </td>
+        <td>
+            <input name="age" type="text" required>
+        </td>
+        <td>
+            <input name="text" type="text" required>
+        </td>
+        `;
+    table.appendChild(row);
+    console.log(table.childNodes.length);
+
+    if (table.childNodes.length >= 3) {
+      delBtn.style.display = 'block';
+    }
+  });
+  delBtn.addEventListener('click', () => {
+    table.lastChild.remove();
+
+    if (table.childNodes.length <= 2) {
+      delBtn.style.display = 'none';
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (addDelRow);
+
+/***/ }),
+
+/***/ "./src/js/modules/checkInputs.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/checkInputs.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const checkInputs = () => {
+  const numInput = document.querySelector('input[name="name"]');
+  const strInput = document.querySelector('input[name="age"]');
+  numInput.addEventListener('input', () => {
+    numInput.value = numInput.value.replace(/\d/, '');
+  });
+  strInput.addEventListener('input', () => {
+    strInput.value = strInput.value.replace(/\D/, '');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (checkInputs);
 
 /***/ })
 

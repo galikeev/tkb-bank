@@ -32,32 +32,40 @@
             </nav>
         </aside>
         <main class="main">
-            <table class="table">
-                <tr>
-                    <th>ФИО</th>
-                    <th>ДОЛЖНОСТЬ</th>
-                    <th>ВОЗРАСТ</th>
-                    <th>КОМПЕТЕНЦИИ</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                    <td>
-                        <input type="text">
-                    </td>
-                </tr>
-            </table>
-            <div class="table__buttons">
-                <button>Отправить</button>
-                <button>Добавить</button>
-            </div>
+            <form action="#">
+                <table class="table">
+                    <tr>
+                        <th>ФИО</th>
+                        <th>ДОЛЖНОСТЬ</th>
+                        <th>ВОЗРАСТ</th>
+                        <th>КОМПЕТЕНЦИИ</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="name" type="text" required>
+                        </td>
+                        <td>
+                            <select name="#" id="#">
+                                <option value="1">менеджер</option>
+                                <option value="1">аналитик</option>
+                                <option value="1">программист</option>
+                                <option value="1">юрист</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input name="age" type="text" required>
+                        </td>
+                        <td>
+                            <input name="text" type="text" required>
+                        </td>
+                    </tr>
+                </table>
+                <div class="table__buttons">
+                    <button class="button button__send">Отправить</button>
+                    <button class="button button__add">Добавить</button>
+                </div>
+                <button class="button button__del">удалить</button>
+            </form>
         </main>
         <footer class="footer">Footer</footer>
     </div>
