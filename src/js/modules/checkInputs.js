@@ -1,13 +1,12 @@
 const checkInputs = () => {
-    const numInput = document.querySelector('input[name="name"]');
-    const strInput = document.querySelector('input[name="age"]');
+    const table = document.querySelector('.table');
 
-    numInput.addEventListener('input', () => {
-        numInput.value = numInput.value.replace(/\d/, '');
-    });
-
-    strInput.addEventListener('input', () => {
-        strInput.value = strInput.value.replace(/\D/, '');
+    table.addEventListener('input', (event) => {
+        if (event.target.classList.contains('table__name')) {
+            event.target.value = event.target.value.replace(/\d/, '');
+        } else if (event.target.classList.contains('table__age')) {
+            event.target.value = event.target.value.replace(/\D/, '');
+        }
     });
 };
 

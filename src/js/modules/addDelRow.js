@@ -3,15 +3,17 @@ const addDelRow = () => {
     const addBtn = document.querySelector('.button__add');
     const table = document.querySelector('.table');
     const delBtn = document.querySelector('.button__del');
+    let count = 1;
 
     addBtn.addEventListener('click', () => {
+        count++;
         const row = document.createElement('tr');
         row.innerHTML = `
         <td>
-            <input name="name" type="text" required>
+            <input name="name${count}" type="text" required class="table__name">
         </td>
         <td>
-            <select name="#" id="#">
+            <select name="post${count}" id="#">
                 <option value="1">менеджер</option>
                 <option value="1">аналитик</option>
                 <option value="1">программист</option>
@@ -19,14 +21,13 @@ const addDelRow = () => {
             </select>
         </td>
         <td>
-            <input name="age" type="text" required>
+            <input name="age${count}" type="text" required class="table__age">
         </td>
         <td>
-            <input name="text" type="text" required>
+            <input name="text${count}" type="text">
         </td>
         `;
         table.appendChild(row);
-        console.log(table.childNodes.length);
 
         if (table.childNodes.length >= 3) {
             delBtn.style.display = 'block';
