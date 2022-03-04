@@ -42,10 +42,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <input name="name" type="text" required>
+                            <input name="name" type="text" required class="table__name">
                         </td>
                         <td>
-                            <select name="#" id="#">
+                            <select name="post" id="#">
                                 <option value="1">менеджер</option>
                                 <option value="1">аналитик</option>
                                 <option value="1">программист</option>
@@ -53,18 +53,19 @@
                             </select>
                         </td>
                         <td>
-                            <input name="age" type="text" required>
+                            <input name="age" type="text" required class="table__age">
                         </td>
                         <td>
-                            <input name="text" type="text" required>
+                            <input name="text" type="text">
                         </td>
                     </tr>
+
+                <button type="button" class="button button__del">удалить</button>
                 </table>
                 <div class="table__buttons">
                     <button class="button button__send">Отправить</button>
-                    <button class="button button__add">Добавить</button>
+                    <button type="button" class="button button__add">Добавить</button>
                 </div>
-                <button class="button button__del">удалить</button>
             </form>
         </main>
         <footer class="footer">Footer</footer>
