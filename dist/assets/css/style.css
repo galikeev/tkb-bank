@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 * {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -21,6 +22,48 @@ a:hover {
 
 li {
   list-style-type: none;
+}
+
+.wrapper {
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px auto 50px;
+}
+.wrapper > * {
+  padding: 1rem;
+  background: #e2deed;
+  border: 1px solid black;
+}
+
+header {
+  grid-column: 2/3;
+}
+
+main {
+  grid-column: 2/3;
+}
+
+aside {
+  grid-row: 1/4;
+}
+
+footer {
+  grid-column: 2/3;
+}
+
+table {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid grey;
+}
+
+td {
+  border: 1px solid grey;
 }
 
 .container {

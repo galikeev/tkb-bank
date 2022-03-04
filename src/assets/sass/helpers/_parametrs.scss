@@ -23,6 +23,49 @@ li {
     list-style-type: none;
 }
 
+.wrapper {
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px auto 50px;
+
+    > * {
+        padding: 1rem;
+        background: #e2deed;
+        border: 1px solid black;
+    }
+}
+
+header {
+    grid-column: 2 / 3;
+}
+
+main {
+    grid-column: 2 / 3;
+}
+
+aside {
+    grid-row: 1 / 4;
+}
+
+footer {
+    grid-column: 2 / 3;
+}
+    
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid grey;
+}
+
+td {
+    border: 1px solid grey;
+}
+
 .container {
     width: 1390px;
     margin: 0 auto;
