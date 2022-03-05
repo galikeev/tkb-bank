@@ -10,57 +10,71 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <input type="search" placeholder="поиск">
+            <div class="header__wrapper">
+                <input type="search" placeholder="поиск" class="input header__input">
+            </div>
         </header>
         <aside class="aside">
-            <div>Меню</div>
-            <nav class="nav">
-                <ul class="nav__wrapper">
-                    <li class="nav__item">
-                        <a href="#">Пункт 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Пункт 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Пункт 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Пункт 1</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="aside__wrapper">
+                <div class="nav">Меню</div>
+                <nav class="nav__menu">
+                    <ul class="nav__wrapper">
+                        <li class="nav__item">
+                            <a href="#">Пункт 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#">Пункт 2</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#">Пункт 3</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#">Пункт 4</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </aside>
         <main class="main">
-            <form action="#">
+            <form action="#" class="form">
                 <table class="table">
                     <tr>
-                        <th>ФИО</th>
-                        <th>ДОЛЖНОСТЬ</th>
-                        <th>ВОЗРАСТ</th>
-                        <th>КОМПЕТЕНЦИИ</th>
+                        <th class="table__head">ФИО</th>
+                        <th class="table__head">ДОЛЖНОСТЬ</th>
+                        <th class="table__head">ВОЗРАСТ</th>
+                        <th class="table__head">КОМПЕТЕНЦИИ</th>
                     </tr>
-                    <tr>
+                    <tr class="table__body">
                         <td>
-                            <input name="name" type="text" required class="table__name">
+                            <div class="form__field">
+                                <label for="name"></label>
+                                <input name="name" type="text" required pattern="[A-Za-z0-9]{4,}" class="table__name input">
+                            </div>
                         </td>
                         <td>
-                            <select name="post" id="#">
-                                <option value="1">менеджер</option>
-                                <option value="1">аналитик</option>
-                                <option value="1">программист</option>
-                                <option value="1">юрист</option>
-                            </select>
+                            <div class="form__field">
+                                <select name="post" id="#" class="input">
+                                    <option value="1">менеджер</option>
+                                    <option value="1">аналитик</option>
+                                    <option value="1">программист</option>
+                                    <option value="1">юрист</option>
+                                </select>
+                            </div>
                         </td>
                         <td>
-                            <input name="age" type="text" required class="table__age">
+                            <div class="form__field">
+                                <label for="age"></label>
+                                <input name="age" type="text" required class="table__age input">
+                            </div>
                         </td>
                         <td>
-                            <input name="text" type="text">
+                            <div class="form__field">
+                                <input name="text" type="text" class="input">
+                            </div>
                         </td>
                     </tr>
 
-                <button type="button" class="button button__del">удалить</button>
+                    <button type="button" class="button button__del">Удалить</button>
                 </table>
                 <div class="table__buttons">
                     <button class="button button__send">Отправить</button>
@@ -68,7 +82,11 @@
                 </div>
             </form>
         </main>
-        <footer class="footer">Footer</footer>
+        <footer class="footer">
+            <div class="footer__wrapper">
+                2022
+            </div>
+        </footer>
     </div>
 
     <script src="js/script.js"></script>

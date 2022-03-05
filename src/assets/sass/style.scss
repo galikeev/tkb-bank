@@ -2,6 +2,13 @@
 
 @import 'helpers/parametrs';
 
-@import 'pages/aside';
-
+@import 'components/nav';
 @import 'components/button';
+@import 'components/table';
+@import 'components/form';
+@import 'components/input';
+
+@import 'pages/header';
+@import 'pages/aside';
+@import 'pages/footer';
+

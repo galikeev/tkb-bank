@@ -28,17 +28,12 @@ li {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 50px auto 50px;
-
-    > * {
-        padding: 1rem;
-        background: #e2deed;
-        border: 1px solid black;
-    }
+    grid-template-rows: 70px auto 100px;
 }
 
 header {
     grid-column: 2 / 3;
+    align-self: flex-start;
 }
 
 main {
@@ -51,28 +46,24 @@ aside {
 
 footer {
     grid-column: 2 / 3;
+    align-self: flex-end;
 }
     
 table {
-    border: 1px solid grey;
     border-collapse: collapse;
 }
 
 th {
-    border: 1px solid grey;
     padding: 10px 20px;
 }
 
 td {
-    border: 1px solid grey;
     padding: 10px 20px;
 }
-
-.container {
-    width: 1390px;
-    margin: 0 auto;
+.error {
+    border: 1px solid red;
 }
 
-.link {
-    text-decoration: underline;
+.success {
+    border: 1px solid green;
 }

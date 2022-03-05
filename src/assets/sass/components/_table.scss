@@ -1,0 +1,28 @@
+.table {
+    margin-top: 15px;
+    background: #c83240;
+    border-radius: 6px;
+    color: #fff;
+    &__head {
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    &__body {
+        background: #a3a3a3;
+        td {
+            border-right: 1px solid #dfdfdf;
+            border-bottom: 1px solid #dfdfdf;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    &__buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
